@@ -1,80 +1,125 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Image Encryption Tool</title>
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  />
-  <style>
-    body {
-      background-color: #343a40; /* Dark background for the black theme */
-      color: #f8f9fa; /* Light text color for contrast */
-    }
-    .container {
-      margin-top: 50px;
-    }
-    .card {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-    .card-title {
-      font-size: 1.25rem;
-    }
-    .card-text {
-      font-size: 1rem;
-    }
-    .card-icon {
-      font-size: 3rem;
-      color: #007bff; /* Blue color for icons */
-    }
-    .card-body {
-      text-align: center;
-    }
-    .btn-custom {
-      background-color: #007bff;
-      color: #fff;
-    }
-    .btn-custom:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 class="text-center mt-5 mb-4">Image Encryption Tool</h1>
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <i class="fas fa-lock card-icon"></i>
-            <h5 class="card-title mt-3">Simple Image Encryption/Decryption</h5>
-            <p class="card-text">Encrypt and decrypt images with ease using this simple tool.</p>
-            <a href="image_processor.html" class="btn btn-custom">Get Started</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Encryption Tool</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script>
+      // JavaScript code using Three.js to create a 3D scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.getElementById("3d-scene").appendChild(renderer.domElement);
+
+      // Create your 3D objects and animations here
+
+      function animate() {
+        requestAnimationFrame(animate);
+        // Update your 3D objects and animations
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script>
+    <style>
+      body {
+        background-color: #121212;
+        color: #f8f9fa;
+      }
+      /* ... your existing styles ... */
+      .card {
+        background-color: #202020;
+        animation: fadeInUp 1s ease;
+      }
+      .card-title {
+        color: #007bff;
+      }
+      .card-text {
+        color: #ccc;
+      }
+      .btn-custom {
+        background-color: #007bff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+      }
+      .btn-custom:hover {
+        background-color: #0056b3;
+      }
+      .hero-section {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <h1 class="text-center mt-5 mb-4 animate__animated animate__fadeInDown">
+        Image Encryption Tool
+      </h1>
+      <div id="3d-scene"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <i
+                class="fas fa-lock fa-4x mb-3 animate__animated animate__zoomIn"
+              ></i>
+              <h5 class="card-title mt-3 animate__animated animate__fadeInLeft">
+                Simple Image Encryption/Decryption
+              </h5>
+              <p class="card-text animate__animated animate__fadeInRight">
+                Encrypt and decrypt images with ease using this simple tool.
+              </p>
+              <a
+                href="image_processor.html"
+                class="btn btn-custom animate__animated animate__pulse"
+                >Get Started</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <i class="fas fa-lock-open card-icon"></i>
-            <h5 class="card-title mt-3">Image Encryption/Decryption with Message Embedding</h5>
-            <p class="card-text">Encrypt images and embed messages within them for secure communication.</p>
-            <a href="image_message_processor.html" class="btn btn-custom">Get Started</a>
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <i
+                class="fas fa-key fa-4x mb-3 animate__animated animate__zoomIn"
+              ></i>
+              <h5 class="card-title mt-3 animate__animated animate__fadeInLeft">
+                Image Encryption/Decryption with Message Embedding
+              </h5>
+              <p class="card-text animate__animated animate__fadeInRight">
+                Encrypt images and embed messages within them for secure
+                communication.
+              </p>
+              <a
+                href="image_message_processor.html"
+                class="btn btn-custom animate__animated animate__pulse"
+                >Get Started</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
