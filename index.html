@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Image Encryption Tool</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="mt-5">Image Encryption Tool</h1>
-      <div class="list-group">
-        <a
-          href="image_processor.html"
-          class="list-group-item list-group-item-action"
-          >Simple Image Encryption/Decryption</a
-        >
-        <a
-          href="image_message_processor.html"
-          class="list-group-item list-group-item-action"
-          >Image Encryption/Decryption with Message Embedding</a
-        >
-      </div>
+<head>
+  <title>Image Encryption Tool</title>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <style>
+    body {
+      background-color: #343a40; /* Dark background for the black theme */
+      color: #f8f9fa; /* Light text color for contrast */
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .list-group-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .list-group-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .list-group-item.active {
+      background-color: #495057; /* Darker background for active state */
+      border-color: #495057;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5 mb-4">Image Encryption Tool</h1>
+    <div class="list-group">
+      <a
+        href="image_processor.html"
+        class="list-group-item list-group-item-action"
+        >Simple Image Encryption/Decryption</a
+      >
+      <a
+        href="image_message_processor.html"
+        class="list-group-item list-group-item-action"
+        >Image Encryption/Decryption with Message Embedding</a
+      >
     </div>
-  </body>
+  </div>
+</body>
 </html>
